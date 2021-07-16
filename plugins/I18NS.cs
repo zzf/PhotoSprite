@@ -3,7 +3,9 @@ using System.Collections.Generic;
 using System.Xml;
 using PhotoSprite.Plugins;
 
-
+/// <summary>
+/// 统一文本读取
+/// </summary>
 namespace PhotoSprite.Plugins
 {
     public class I18NS
