@@ -1,0 +1,1 @@
+PhotoSprite 软件是由 Visual Studio 2019 开发完成，运行前请确保安装了 .NET 2.0 或以上框架。
