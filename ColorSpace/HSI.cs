@@ -3,8 +3,8 @@ using System.Drawing;
 
 /// <summary>
 // H means hue，色相、色调
-// L means lightness，亮度
 // S means saturation，饱和度
+// I means Intensity，亮度
 /// </summary>
 
 namespace PhotoSprite.ColorSpace

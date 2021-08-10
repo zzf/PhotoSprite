@@ -3,8 +3,8 @@ using System.Drawing;
 
 /// <summary>
 // H means hue，色相、色调
-// V/B means brightness，亮度
 // S means saturation，饱和度
+// V/B means brightness，亮度
 /// </summary>
 
 namespace PhotoSprite.ColorSpace
@@ -164,12 +164,17 @@ namespace PhotoSprite.ColorSpace
 
             if (max == 0 || delta == 0)
             {
+                // max == 0 表示是纯黑色，则色相、饱和度、亮度都是0；
+                // delta == 0 表示是灰色，则色相、饱和度是0，而亮度代表灰的程度；
                 s = 0;
                 h = 0;
             }
             else
             {
+                // 饱和度
                 s = delta / max;
+
+                // 色相的计算
                 if (r == max)
                 {
                     h = (g - b) / delta;
@@ -208,6 +213,7 @@ namespace PhotoSprite.ColorSpace
 
             if (s == 0)
             {
+                // 饱和度为0，则是灰色
                 r = v;
                 g = v;
                 b = v;

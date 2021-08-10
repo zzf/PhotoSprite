@@ -3,8 +3,8 @@ using System.Drawing;
 
 /// <summary>
 // H means hue，色相、色调
-// L means lightness，亮度
 // S means saturation，饱和度
+// L means lightness，亮度
 /// </summary>
 
 namespace PhotoSprite.ColorSpace
@@ -187,9 +187,10 @@ namespace PhotoSprite.ColorSpace
                     t1 = 2.0 * l - t2;
 
                     double[] T3 = new double[] {
-              normalisedH + 1.0 / 3.0,
-              normalisedH,
-              normalisedH - 1.0 / 3.0 };
+                        normalisedH + 1.0 / 3.0,
+                        normalisedH,
+                        normalisedH - 1.0 / 3.0
+                    };
 
                     double[] C = new double[3];
 
