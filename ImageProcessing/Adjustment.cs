@@ -164,6 +164,7 @@ namespace PhotoSprite.ImageProcessing
                         // 处理指定位置像素的对比度
                         for (int i = 0; i < 3; i++)
                         {
+                            // 在这里-0.5使亮的部分越亮，暗的部分越暗
                             pixel = ((p[i] / 255.0 - 0.5) * contrast + 0.5) * 255;
                             if (pixel < 0) pixel = 0;
                             if (pixel > 255) pixel = 255;
@@ -219,6 +220,7 @@ namespace PhotoSprite.ImageProcessing
                     {
                         HSL hsl = HSL.FromRgb(p[2], p[1], p[0]);
                         hsl.Hue += hue;
+                        // S饱和度和L亮度，赋值范围[0,1]，赋值时会进行约束
                         hsl.Saturation += saturation;
                         hsl.Luminance += luminance;
 
